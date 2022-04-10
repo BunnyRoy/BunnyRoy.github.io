@@ -10,13 +10,13 @@ export class OpenWeatherService {
   constructor(private http:HttpClient) { }
   WeatherData: any;
   baseUrl:string='https://api.openweathermap.org/data/2.5/weather';
-  ApiKey:string='55fcfac4c132ea4e8b569d066aced92d';
-
+  ApiKey:string='6cbf3827f253a35c8e4b939620ea4aaf';
+  url:string='';
   GetCurrentWeatherData(lat:string,lon:string):void
   {
     debugger
-    this.baseUrl=this.baseUrl+"?lat="+lat+"&lon="+lon+"&appid="+this.ApiKey+"";
-    this.WeatherData= this.http.get(this.baseUrl);
+    this.url=this.baseUrl+"?lat="+lat+"&lon="+lon+"&appid="+this.ApiKey+"";
+    this.WeatherData= this.http.get(this.url);
   }
 
 }
