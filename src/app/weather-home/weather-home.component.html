@@ -1,0 +1,30 @@
+
+<!-- <div>
+    <label for='City'>City</label><br>
+    <input type="text" placeholder="Enter City"/>
+</div> -->
+
+<!-- <div>
+    <label for='Country'>Country</label><br>
+    <input type="text" placeholder="Enter Country"/>
+</div> -->
+
+<div class="row">
+    <div class="col-lg-6 col-md-6 col-md-6 col-xs-12">
+        <label for='Country' class="form-label" >Country</label>
+    </div>
+    <div class="col-lg-6 col-md-6 col-md-6 col-xs-12">
+        <select id="cmbCountry" class="form-select" [(ngModel)]="Country" (change)="cha();">
+            <option *ngFor="let x of cities;let i=index" [value]="x.id" [attr.data-lon]="x.coord.lon">
+                    {{x.name}}
+            </option>
+        </select>
+    </div>
+    
+</div>
+
+
+
+<div class="col-lg-6">
+    <input type="button" class="btn btn-primary" value="Show weather"  (click)="OpenPage();"/>
+</div>
