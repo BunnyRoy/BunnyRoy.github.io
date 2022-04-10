@@ -32,6 +32,7 @@ export interface Weather {
     name:string;
     sys:Sys;
     visibility:number;
+    dt:number;
 
   }
   

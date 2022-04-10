@@ -16,7 +16,7 @@ export class WeatherDataComponent implements OnInit {
   active:string='nav-link active';
   id:any;
   servicedata=<WeatherModel>{};
-
+  unixdate:string='';
 
 
   constructor(private objService: OpenWeatherService, private currentroute: Router) { 
@@ -46,7 +46,7 @@ export class WeatherDataComponent implements OnInit {
             this.servicedata.main= data.main
             this.servicedata.wind =data.wind;;
             this.servicedata = data;
-            
+            this.unixdate=this.GetDate(data.dt).toString();
             localStorage.setItem("WeatherCacheData","");
             localStorage.setItem("WeatherCacheData",JSON.stringify(this.servicedata));
           });
@@ -68,6 +68,20 @@ export class WeatherDataComponent implements OnInit {
   {
     return parseFloat(parseFloat(no.toString()).toFixed(2));
   }
+  GetDate(unixdate:number):string
+  {
+      var a = new Date(unixdate * 1000);
+      var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+      var year = a.getFullYear();
+      var month = months[a.getMonth()];
+      var date = a.getDate();
+      var hour = a.getHours();
+      var min = a.getMinutes();
+      var sec = a.getSeconds();
+      var time = date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec ;
+      return time;
+    
 
+  }
 
 }

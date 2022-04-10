@@ -17,5 +17,45 @@
         "lon": 10.75,
         "lat": 49.01667
     }
+},
+{
+    "id": 1261481,
+    "name": "New Delhi",
+    "state": "",
+    "country": "IN",
+    "coord": {
+        "lon": 77.23114,
+        "lat": 28.61282
+    }
+},
+{
+    "id": 1269843,
+    "name": "Hyderabad",
+    "state": "",
+    "country": "IN",
+    "coord": {
+        "lon": 78.474442,
+        "lat": 17.37528
+    }
+},
+{
+    "id": 4736286,
+    "name": "Texas",
+    "state": "TX",
+    "country": "US",
+    "coord": {
+        "lon": -99.25061,
+        "lat": 31.250441
+    }
+},
+{
+    "id": 2921044,
+    "name": "Federal Republic of Germany",
+    "state": "",
+    "country": "DE",
+    "coord": {
+        "lon": 10.5,
+        "lat": 51.5
+    }
 }
 ]
